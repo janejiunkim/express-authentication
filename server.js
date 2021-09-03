@@ -17,6 +17,14 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
+app.use(session({
+  secret: SECRET_SESSION,
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use(flash());
+
 
 app.get('/', (req,res) => {
   res.render('index');
