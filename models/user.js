@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
-        calidate: {
+         validate: {
           isEmail: {
             msg: "Invalid email",
           },

@@ -1,5 +1,5 @@
 const express = require('express');
-const passport = require("../config/ppConfig");
+const passport = require('../config/ppConfig');
 const router = express.Router();
 
 const {User} = require('../models');
